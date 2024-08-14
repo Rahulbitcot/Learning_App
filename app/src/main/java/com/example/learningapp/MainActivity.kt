@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener{
             val intent = Intent(this , targetActivity  )
             startActivity(intent)
+            //Git Commit
 
         }
     }

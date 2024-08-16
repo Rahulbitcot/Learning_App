@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Learning App"
+            android:text="@string/learning_app"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/white"/>
@@ -29,9 +29,29 @@
         android:id="@+id/btRecyclerView"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:text="Recycler View"
+        android:text="@string/recycler_view"
         android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btActivityLifecycle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/activity_life_cycle"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/btRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btFragmentLifeCycle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/fragment_life_cycle"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/btActivityLifecycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

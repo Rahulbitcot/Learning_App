@@ -13,6 +13,18 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".fragmentLifeCycle.FragmentLifeCycle"
+            android:exported="false" />
+        <activity
+            android:name=".activityLifeCycle.ActivityB"
+            android:exported="false" />
+        <activity
+            android:name=".activityLifeCycle.ActivityA"
+            android:exported="false" />
+        <activity
+            android:name=".activityLifeCycle.ActivityLifeCycle"
+            android:exported="false" />
+        <activity
             android:name=".recyclerView.RecyclerViewActivity"
             android:exported="false" />
         <activity

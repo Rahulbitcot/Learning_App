@@ -7,4 +7,17 @@
     <string name="_2001">2001</string>
     <string name="population">Population</string>
     <string name="year">Year</string>
+    <string name="recycler_view">Recycler View</string>
+    <string name="learning_app">Learning App</string>
+    <string name="activity_life_cycle">Activity Life-Cycle</string>
+    <string name="activity_a">Activity A</string>
+    <string name="activity_b">Activity B</string>
+    <string name="back_button">Go Back</string>
+    <string name="fragment_life_cycle">Fragment Life-Cycle</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="fragment_1">Fragment 1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment2">Fragment 2</string>
+    <string name="fragment1">Fragment 1</string>
 </resources>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Learning App</string>
+    <string name="id_nation">ID Nation</string>
+    <string name="_4512u">4512U</string>
+    <string name="nation">Nation</string>
+    <string name="usa">USA</string>
+    <string name="_2001">2001</string>
+    <string name="population">Population</string>
+    <string name="year">Year</string>
 </resources>

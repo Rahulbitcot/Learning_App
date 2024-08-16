@@ -17,13 +17,13 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding = ActivityRecyclerViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val p1 = ApiData("566" , "USA" , "2001" ,"125464")
-        val p2 = ApiData("566606" , "UdsSA" , "2sd001" ,"125sds464")
-        val p3 = ApiData("56dsf6" , "USdfscxA" , "20dsfs01" ,"125sd464")
-        val p4 = ApiData("566" , "USA" , "2001" ,"125464")
-        val p5 = ApiData("566606" , "UdsSA" , "2012" ,"125sds464")
-        val p6 = ApiData("56dscvf6" , "USs" , "2011" ,"125sd464")
+       //Sample Api Data
+        val p1 = ApiData("566" , "USA" , "2001" ,"12546564")
+        val p2 = ApiData("566606" , "UAE" , "2012" ,"12546564")
+        val p3 = ApiData("56dsf6" , "INDIA" , "2008" ,"8965464")
+        val p4 = ApiData("566" , "PAKISTAN" , "2001" ,"125464")
+        val p5 = ApiData("566606" , "MEXICO" , "2012" ,"989464")
+        val p6 = ApiData("56dscf6" , "UKRIAN" , "2011" ,"656564")
 
         val dataset = arrayOf(p1,p2,p3,p4,p5,p6)
 

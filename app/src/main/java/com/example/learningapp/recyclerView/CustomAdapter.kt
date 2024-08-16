@@ -7,10 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.learningapp.R
 
+// Custom Adapter For The Recycler View
+
 class CustomAdapter(private val dataSet: Array<ApiData>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-    // ViewHolder class definition
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val idNation: TextView = view.findViewById(R.id.txtView_idNation)
         val nation :TextView = view.findViewById(R.id.txtView_Nation)
@@ -20,14 +21,12 @@ class CustomAdapter(private val dataSet: Array<ApiData>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // Inflate the layout for each item
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.recyclerview_item_holder, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // Bind data to the views
         val item = dataSet[position]
         holder.idNation.text = item.idNation
         holder.nation.text = item.nation

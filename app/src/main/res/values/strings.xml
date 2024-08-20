@@ -24,4 +24,6 @@
     <string name="sharedprefToolbar">SharedPref</string>
     <string name="broadcastreceiver">BroadcastReceiver</string>
     <string name="turn_on_off_flight_mode_to_see_the_toast">Turn On/Off flight mode to see the toast</string>
+    <string name="view_pager">View Pager</string>
+    <string name="onboarding_first_screen">OnBoarding First Screen</string>
 </resources>

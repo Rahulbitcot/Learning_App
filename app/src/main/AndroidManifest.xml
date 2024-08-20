@@ -14,6 +14,9 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".mvvm.view.ViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".viewpager.activity.MainScreen"
             android:exported="false" />
         <activity

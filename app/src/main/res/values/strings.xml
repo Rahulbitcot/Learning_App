@@ -26,4 +26,7 @@
     <string name="turn_on_off_flight_mode_to_see_the_toast">Turn On/Off flight mode to see the toast</string>
     <string name="view_pager">View Pager</string>
     <string name="onboarding_first_screen">OnBoarding First Screen</string>
+    <string name="_10">10</string>
+    <string name="result">Result</string>
+    <string name="mvvm">Mvvm</string>
 </resources>

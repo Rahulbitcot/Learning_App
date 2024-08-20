@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvvm.view.ViewActivity">
+
+    <EditText
+        android:id="@+id/editTxt_num1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLength="5"
+        android:layout_marginTop="150dp"
+        android:textSize="25sp"
+        android:inputType="number"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTxt_num2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTxt_num2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLength="5"
+        android:inputType="number"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editTxt_num1"
+        app:layout_constraintEnd_toStartOf="@+id/editTxt_num1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTxt_num1" />
+
+    <TextView
+        android:id="@+id/txtViewResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLength="5"
+        android:textSize="25sp"
+        android:hint="@string/_10"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_num1" />
+
+    <Button
+        android:id="@+id/bt_Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtViewResult"
+        app:layout_constraintStart_toStartOf="@+id/txtViewResult"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewResult"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

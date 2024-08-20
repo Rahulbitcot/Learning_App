@@ -16,7 +16,9 @@ class ActivityB : AppCompatActivity() {
         setContentView(binding.root)
         Log.d("Activity_B_Log" , "Activity B is on  onCreate ")
 
-        binding.txtViewInfo.text = "Activity B, Please Check The Log to get the Current Status of the Activity"
+        binding.txtViewInfo.text = buildString {
+        append("Activity B, Please Check The Log to get the Current Status of the Activity")
+    }
         onBtnClick(binding.btBack, ActivityLifeCycle::class.java )
 
     }
@@ -25,6 +27,9 @@ class ActivityB : AppCompatActivity() {
         btn.setOnClickListener {
             val intent = Intent(this, targetActivity)
             startActivity(intent)
+            //With finish() ,activity will destroy after going to on pause state
+            finish()
+
         }
     }
         override fun onStart() {

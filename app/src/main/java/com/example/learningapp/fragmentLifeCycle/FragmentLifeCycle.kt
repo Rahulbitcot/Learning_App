@@ -34,6 +34,7 @@ class FragmentLifeCycle : AppCompatActivity() {
         }.attach()
 
     }
-    //Check log using   package:mine (tag:Fragment_A_Log | tag:Fragment_B_Log) Filter
+
+    //Check log using { package:mine (tag:Fragment_A_Log | tag:Fragment_B_Log) } Filter
 
 }

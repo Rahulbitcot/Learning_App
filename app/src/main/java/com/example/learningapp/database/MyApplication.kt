@@ -1,4 +1,4 @@
-package com.example.learningapp
+package com.example.learningapp.database
 
 import android.app.Application
 import android.content.Context
@@ -14,6 +14,7 @@ open class MyApplication : Application() {
         fun initialize(context: Context) {
             sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         }
+
 
         fun getCounterValue(): Int {
             val counter = sharedPreferences.getInt(COUNTER_KEY, 0)

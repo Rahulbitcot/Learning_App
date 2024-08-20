@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/activity_life_cycle"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/btRecyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/fragment_life_cycle"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/btActivityLifecycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -60,8 +60,18 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/sharedpref"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/btFragmentLifeCycle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btBroadcastReceiver"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/broadcastreceiver"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btSharedPref"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

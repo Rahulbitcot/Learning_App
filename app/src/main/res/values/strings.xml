@@ -22,4 +22,6 @@
     <string name="fragment1">Fragment 1</string>
     <string name="sharedpref">SharedPref</string>
     <string name="sharedprefToolbar">SharedPref</string>
+    <string name="broadcastreceiver">BroadcastReceiver</string>
+    <string name="turn_on_off_flight_mode_to_see_the_toast">Turn On/Off flight mode to see the toast</string>
 </resources>

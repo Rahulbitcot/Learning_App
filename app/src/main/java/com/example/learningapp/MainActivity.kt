@@ -3,9 +3,9 @@ package com.example.learningapp
 import com.example.learningapp.recyclerView.RecyclerViewActivity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
+import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.FragmentLifeCycle
@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btActivityLifecycle ,ActivityLifeCycle::class.java )
         onBtnClick(binding.btFragmentLifeCycle ,FragmentLifeCycle::class.java )
         onBtnClick(binding.btSharedPref , SharedPref::class.java )
+        onBtnClick(binding.btBroadcastReceiver , BroadcastReceiverActivity::class.java )
+
 
     }
 

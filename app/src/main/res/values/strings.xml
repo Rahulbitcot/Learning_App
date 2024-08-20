@@ -20,4 +20,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment2">Fragment 2</string>
     <string name="fragment1">Fragment 1</string>
+    <string name="sharedpref">SharedPref</string>
+    <string name="sharedprefToolbar">SharedPref</string>
 </resources>

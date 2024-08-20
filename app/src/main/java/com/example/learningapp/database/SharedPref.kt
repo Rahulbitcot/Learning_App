@@ -14,8 +14,7 @@ class SharedPref : AppCompatActivity() {
         binding = ActivitySharedPrefBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val myApp = applicationContext as MyApplication
-        val counter = myApp.getCounterValue()
+        val counter = MyApplication.getCounterValue()
 
         binding.txtViewCounter.text = buildString {
             append("Application opened ")

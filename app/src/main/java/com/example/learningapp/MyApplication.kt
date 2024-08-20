@@ -6,28 +6,33 @@ import android.content.SharedPreferences
 
 open class MyApplication : Application() {
 
-    private val COUNTER_KEY = "Counter_Value"
-    private lateinit var sharedPreferences: SharedPreferences
+    companion object {
+        private const val COUNTER_KEY = "Counter_Value"
+        private const val PREFS_NAME = "learning_app_SharedPref"
+        private lateinit var sharedPreferences: SharedPreferences
+
+        fun initialize(context: Context) {
+            sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        }
+
+        fun getCounterValue(): Int {
+            val counter = sharedPreferences.getInt(COUNTER_KEY, 0)
+            return counter
+        }
+
+        fun setCounterValue(value: Int) {
+            with(sharedPreferences.edit()) {
+                putInt(COUNTER_KEY, value)
+                apply()
+            }
+        }
+    }
 
     override fun onCreate() {
         super.onCreate()
+        initialize(this)
 
-        sharedPreferences = getSharedPreferences("learning_app_SharedPref", Context.MODE_PRIVATE)
-        val counter = sharedPreferences.getInt(COUNTER_KEY, 0)
+        val counter = getCounterValue()
         setCounterValue(counter + 1)
-        getCounterValue()
-    }
-
-    fun getCounterValue(): Int{
-        sharedPreferences = getSharedPreferences("learning_app_SharedPref", Context.MODE_PRIVATE)
-        val counter = sharedPreferences.getInt(COUNTER_KEY, 0)
-        return counter
-    }
-
-    private fun setCounterValue(value: Int) {
-        with(sharedPreferences.edit()) {
-            putInt(COUNTER_KEY, value)
-            apply()
-        }
     }
 }

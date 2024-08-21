@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
+import com.example.learningapp.retrofit.RandomUserActivity
 import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btViewPager , ViewPagerActivity::class.java )
         onBtnClick(binding.btMvvm , ViewActivity::class.java )
         onBtnClick(binding.btLiveData , MainView::class.java )
+        onBtnClick(binding.btRetrofit , RandomUserActivity::class.java )
 
     }
 

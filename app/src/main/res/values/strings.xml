@@ -38,4 +38,5 @@
     <string name="update">Update</string>
     <string name="live_data_textview">Live Data TextView</string>
     <string name="livedata">LiveData</string>
+    <string name="retrofit_mvvm">Retrofit + MVVM</string>
 </resources>

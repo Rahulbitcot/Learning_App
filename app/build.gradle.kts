@@ -55,9 +55,8 @@ dependencies {
     implementation (libs.converter.gson)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
-
-
-    
+    implementation (libs.androidx.lifecycle.runtime)
+    implementation (libs.androidx.lifecycle.viewmodel)// For Kotlin use lifecycle-viewmodel-ktx
 
 
 }

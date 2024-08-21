@@ -9,6 +9,7 @@ import com.example.learningapp.roomDb.database.ContactDatabase
 import com.example.learningapp.roomDb.model.Contacts
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlin.math.log
 
 class RoomDbActivity : AppCompatActivity() {
     lateinit var database  :ContactDatabase

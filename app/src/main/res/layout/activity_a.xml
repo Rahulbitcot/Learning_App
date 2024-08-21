@@ -12,7 +12,7 @@
         android:id="@+id/txtView_Info"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Activity A , Please Check The Log to get the Current Status of the Activity"
+        android:text="@string/activity_a_please_check_the_log_to_get_the_current_status_of_the_activity"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:textStyle="bold"

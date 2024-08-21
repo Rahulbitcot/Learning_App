@@ -24,7 +24,7 @@
             android:id="@+id/bt_GetStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Get Start "
+            android:text="@string/get_start"
             android:textSize="26sp"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"

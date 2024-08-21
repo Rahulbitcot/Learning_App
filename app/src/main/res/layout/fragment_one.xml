@@ -25,7 +25,7 @@
             android:id="@+id/bt_Next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Next "
+            android:text="@string/next"
             android:textSize="26sp"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"

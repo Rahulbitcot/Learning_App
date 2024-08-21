@@ -29,4 +29,10 @@
     <string name="_10">10</string>
     <string name="result">Result</string>
     <string name="mvvm">Mvvm</string>
+    <string name="simple_calculator_using_mvvm_architecture">Simple Calculator Using MVVM Architecture</string>
+    <string name="result_">Result</string>
+    <string name="activity_a_please_check_the_log_to_get_the_current_status_of_the_activity">Activity A , Please Check The Log to get the Current Status of the Activity</string>
+    <string name="sample">sample</string>
+    <string name="next">Next</string>
+    <string name="get_start">Get Start</string>
 </resources>

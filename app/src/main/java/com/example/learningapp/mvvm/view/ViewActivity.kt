@@ -21,7 +21,9 @@ class ViewActivity : AppCompatActivity() {
             val num2 = binding.editTxtNum1.text.toString().toIntOrNull() ?: 0
 
             val result = calculatorViewModel.result(num1, num2)
-            binding.txtViewResult.text = "${result.sum}"
+            binding.txtViewResult.text = buildString {
+        append(result.sum)
+              }
         }
     }
 }

@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/sample"
         android:src="@drawable/main_screen"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

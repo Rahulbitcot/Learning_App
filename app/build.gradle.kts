@@ -1,7 +1,7 @@
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -38,7 +38,16 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
+object Libs {
+    object Plugins {
+        val android = "com.android.application"
+        val kotlin = "org.jetbrains.kotlin.android"
+        val kotlinKapt = "org.jetbrains.kotlin.kapt"
+    }
+}
+
 
 dependencies {
 
@@ -57,7 +66,11 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
     implementation (libs.androidx.lifecycle.runtime)
-    implementation (libs.androidx.lifecycle.viewmodel)// For Kotlin use lifecycle-viewmodel-ktx
+    implementation (libs.androidx.lifecycle.viewmodel)
 
-
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
 }
+

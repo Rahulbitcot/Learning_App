@@ -4,6 +4,7 @@ import com.example.learningapp.recyclerView.RecyclerViewActivity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.RoomDatabase
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
 import com.example.learningapp.retrofit.RandomUserActivity
 import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
@@ -12,6 +13,7 @@ import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.FragmentLifeCycle
 import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.mvvm.view.ViewActivity
+import com.example.learningapp.roomDb.RoomDbActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
 import com.google.android.material.button.MaterialButton
 
@@ -33,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btMvvm , ViewActivity::class.java )
         onBtnClick(binding.btLiveData , MainView::class.java )
         onBtnClick(binding.btRetrofit , RandomUserActivity::class.java )
+        onBtnClick(binding.btRoomDb , RoomDbActivity::class.java )
+
 
     }
 

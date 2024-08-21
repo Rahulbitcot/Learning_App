@@ -44,4 +44,6 @@
     <string name="activity_to_showcase_the_implementation_of_livedata_using_mvvm_model">Activity to showCase the implementation of LiveData using Mvvm model</string>
     <string name="activity_to_showcase_how_to_fetch_data_using_retrofit_mvvm_check_log_apidata_as_of_now">Activity To ShowCase how to fetch Data using Retrofit + MVVM check log : ApiData : as of now</string>
     <string name="activity_to_showcase_the_sharedpref_and_use_of_application_class_for_global_declaration">Activity to showCase the SharedPref and use of Application class for Global declaration</string>
+    <string name="room_database">Room Database</string>
+    <string name="activity_to_showcase_roomdatabase_check_log_roomdata_as_of_now">Activity To showCase RoomDatabase , check log : RoomData : as of now</string>
 </resources>

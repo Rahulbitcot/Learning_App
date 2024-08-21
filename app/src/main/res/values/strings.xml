@@ -35,4 +35,7 @@
     <string name="sample">sample</string>
     <string name="next">Next</string>
     <string name="get_start">Get Start</string>
+    <string name="update">Update</string>
+    <string name="live_data_textview">Live Data TextView</string>
+    <string name="livedata">LiveData</string>
 </resources>

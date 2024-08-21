@@ -9,6 +9,7 @@ import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.FragmentLifeCycle
+import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.mvvm.view.ViewActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
 import com.google.android.material.button.MaterialButton
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btBroadcastReceiver , BroadcastReceiverActivity::class.java )
         onBtnClick(binding.btViewPager , ViewPagerActivity::class.java )
         onBtnClick(binding.btMvvm , ViewActivity::class.java )
+        onBtnClick(binding.btLiveData , MainView::class.java )
 
     }
 

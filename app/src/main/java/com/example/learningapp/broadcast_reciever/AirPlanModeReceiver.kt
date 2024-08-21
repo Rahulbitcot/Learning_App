@@ -10,7 +10,7 @@ class AirPlanModeReceiver :BroadcastReceiver() {
     private var  airPlanModeState : Boolean = false
     override fun onReceive(context: Context?, intent: Intent?) {
         if(intent?.action == Intent.ACTION_AIRPLANE_MODE_CHANGED){
-            val isAirplaneModeEnabled = intent.getBooleanExtra("state", false) ?: return
+            val isAirplaneModeEnabled = intent.getBooleanExtra("state", false)
 
             if (isAirplaneModeEnabled) {
                 airPlanModeState = true

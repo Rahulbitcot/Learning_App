@@ -50,7 +50,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.tbuonomo:dotsindicator:5.0")
+    implementation(libs.dotsindicator)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
+
+
+    
 
 
 }

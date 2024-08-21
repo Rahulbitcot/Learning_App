@@ -39,4 +39,9 @@
     <string name="live_data_textview">Live Data TextView</string>
     <string name="livedata">LiveData</string>
     <string name="retrofit_mvvm">Retrofit + MVVM</string>
+    <string name="activity_to_showcase_how_the_broadcast_listner_works">Activity To ShowCase how the Broadcast Listner Works</string>
+    <string name="activity_to_showcase_working_of_viewpager">Activity To ShowCase Working of ViewPager</string>
+    <string name="activity_to_showcase_the_implementation_of_livedata_using_mvvm_model">Activity to showCase the implementation of LiveData using Mvvm model</string>
+    <string name="activity_to_showcase_how_to_fetch_data_using_retrofit_mvvm_check_log_apidata_as_of_now">Activity To ShowCase how to fetch Data using Retrofit + MVVM check log : ApiData : as of now</string>
+    <string name="activity_to_showcase_the_sharedpref_and_use_of_application_class_for_global_declaration">Activity to showCase the SharedPref and use of Application class for Global declaration</string>
 </resources>

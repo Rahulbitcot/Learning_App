@@ -8,18 +8,33 @@ class SharedPref : AppCompatActivity() {
 
     private lateinit var binding: ActivitySharedPrefBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySharedPrefBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val counter = MyApplication.getCounterValue()
+        var counter = (application as MyApplication).sharedPreferences.
+        getInt((application as MyApplication).COUNTER_KEY, 0)
 
+        setCounterValue(counter + 1)
+        counter = getCounterValue()
 
         binding.txtViewCounter.text = buildString {
-            append("Application opened ")
+            append("Activity opened ")
             append(counter)
             append(" times ")
+        }
+    }
+    private fun getCounterValue(): Int {
+        val counter = (application as MyApplication).sharedPreferences.getInt((application as MyApplication).COUNTER_KEY, 0)
+        return counter
+    }
+
+    private fun setCounterValue(value: Int) {
+        with((application as MyApplication).sharedPreferences.edit()) {
+            putInt((application as MyApplication).COUNTER_KEY, value)
+            apply()
         }
     }
 }

@@ -7,4 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".retrofit.RandomUserActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/activity_to_showcase_how_to_fetch_data_using_retrofit_mvvm_check_log_apidata_as_of_now"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

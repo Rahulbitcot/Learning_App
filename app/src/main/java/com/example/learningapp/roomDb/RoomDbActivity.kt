@@ -3,13 +3,12 @@ package com.example.learningapp.roomDb
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.room.Room
 import com.example.learningapp.databinding.ActivityRoomDbBinding
 import com.example.learningapp.roomDb.database.ContactDatabase
 import com.example.learningapp.roomDb.model.Contacts
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlin.math.log
 
 class RoomDbActivity : AppCompatActivity() {
     lateinit var database  :ContactDatabase
@@ -22,7 +21,7 @@ class RoomDbActivity : AppCompatActivity() {
         database = Room.databaseBuilder(applicationContext , ContactDatabase::class.java ,
             "Contact Database").build()
 
-          GlobalScope.launch {
+        lifecycleScope.launch {
               database.contactsDao().insertContact(
                   Contacts(0 , "Rahul" , "788524953"))
           }

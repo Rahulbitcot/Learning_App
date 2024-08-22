@@ -7,16 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.learningapp.R
 
-// Custom Adapter For The Recycler View
 
 class CustomAdapter(private val dataSet: Array<ApiData>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val idNation: TextView = view.findViewById(R.id.txtView_idNation)
-        val nation :TextView = view.findViewById(R.id.txtView_Nation)
-        val year :TextView = view.findViewById(R.id.txtView_Year)
-        val population :TextView = view.findViewById(R.id.txtView_Population)
+        val idNation: TextView = view.findViewById(R.id.txtView_Name)
+        val nation :TextView = view.findViewById(R.id.txtView_Email)
+        val year :TextView = view.findViewById(R.id.txtView_Gender)
+        val population :TextView = view.findViewById(R.id.txtView_Location)
 
     }
 

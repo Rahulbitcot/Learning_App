@@ -46,4 +46,10 @@
     <string name="activity_to_showcase_the_sharedpref_and_use_of_application_class_for_global_declaration">Activity to showCase the SharedPref and use of Application class for Global declaration</string>
     <string name="room_database">Room Database</string>
     <string name="activity_to_showcase_roomdatabase_check_log_roomdata_as_of_now">Activity To showCase RoomDatabase , check log : RoomData : as of now</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="location">Location</string>
+    <string name="phone">Phone</string>
+    <string name="dob">Dob</string>
+    <string name="gender">Gender</string>
 </resources>

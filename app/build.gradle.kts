@@ -67,10 +67,16 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation (libs.androidx.lifecycle.runtime)
     implementation (libs.androidx.lifecycle.viewmodel)
-
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
     annotationProcessor(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+    implementation (libs.moshi)
+    kapt ("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
+    implementation (libs.moshi)
+    implementation (libs.moshi.kotlin)
+    kapt (libs.com.squareup.moshi.moshi.kotlin.codegen)
+    implementation (libs.sdp.android)
+    implementation (libs.ssp.android)
 }
 

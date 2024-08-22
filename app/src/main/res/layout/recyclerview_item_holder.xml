@@ -8,7 +8,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#EFDFC6"
+        app:cardBackgroundColor="@color/random_user_item_cardBg"
         app:cardElevation="10dp"
         android:layout_margin="10dp"
         app:cardCornerRadius="20dp"
@@ -32,7 +32,7 @@
                android:orientation="horizontal"/>
 
             <TextView
-                android:id="@+id/txt_idNation"
+                android:id="@+id/txt_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -40,22 +40,22 @@
                 android:text="@string/id_nation"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/txt_Nation"
+                app:layout_constraintBottom_toTopOf="@+id/txt_Email"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/txtView_idNation"
+                android:id="@+id/txtView_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:textColor="@color/black"
                  app:layout_constraintStart_toStartOf="@id/barrier"
-                app:layout_constraintTop_toTopOf="@id/txt_idNation"
-                app:layout_constraintBottom_toBottomOf="@id/txt_idNation"/>
+                app:layout_constraintTop_toTopOf="@id/txt_Name"
+                app:layout_constraintBottom_toBottomOf="@id/txt_Name"/>
 
             <TextView
-                android:id="@+id/txt_Nation"
+                android:id="@+id/txt_Email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -64,21 +64,21 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_idNation"
-                app:layout_constraintBottom_toTopOf="@id/txt_Year"/>
+                app:layout_constraintTop_toBottomOf="@id/txt_Name"
+                app:layout_constraintBottom_toTopOf="@id/txt_Gender"/>
 
             <TextView
-                android:id="@+id/txtView_Nation"
+                android:id="@+id/txtView_Email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@id/barrier"
-                app:layout_constraintTop_toTopOf="@id/txt_Nation"
-                app:layout_constraintBottom_toBottomOf="@id/txt_Nation"/>
+                app:layout_constraintTop_toTopOf="@id/txt_Email"
+                app:layout_constraintBottom_toBottomOf="@id/txt_Email"/>
 
             <TextView
-                android:id="@+id/txt_Year"
+                android:id="@+id/txt_Gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -87,21 +87,21 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_Nation"
-                app:layout_constraintBottom_toTopOf="@id/txt_Population"/>
+                app:layout_constraintTop_toBottomOf="@id/txt_Email"
+                app:layout_constraintBottom_toTopOf="@id/txt_Location"/>
 
             <TextView
-                android:id="@+id/txtView_Year"
+                android:id="@+id/txtView_Gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@id/barrier"
-                app:layout_constraintTop_toTopOf="@id/txt_Year"
-                app:layout_constraintBottom_toBottomOf="@id/txt_Year"/>
+                app:layout_constraintTop_toTopOf="@id/txt_Gender"
+                app:layout_constraintBottom_toBottomOf="@id/txt_Gender"/>
 
             <TextView
-                android:id="@+id/txt_Population"
+                android:id="@+id/txt_Location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -110,18 +110,18 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_Year"
+                app:layout_constraintTop_toBottomOf="@id/txt_Gender"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
-                android:id="@+id/txtView_Population"
+                android:id="@+id/txtView_Location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@id/barrier"
-                app:layout_constraintTop_toTopOf="@id/txt_Population"
-                app:layout_constraintBottom_toBottomOf="@id/txt_Population"/>
+                app:layout_constraintTop_toTopOf="@id/txt_Location"
+                app:layout_constraintBottom_toBottomOf="@id/txt_Location"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

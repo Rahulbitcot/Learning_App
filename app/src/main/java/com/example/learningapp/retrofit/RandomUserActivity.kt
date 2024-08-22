@@ -32,9 +32,9 @@ class RandomUserActivity : AppCompatActivity() {
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(repository, database))
             .get(MainViewModel::class.java)
 
-//        lifecycleScope.launch {
-//            database.userDao().deleteAllData()
-//        }
+        lifecycleScope.launch {
+            database.userDao().deleteAllData()
+        }
 
         logcat()
         randomUserRecyclerView()

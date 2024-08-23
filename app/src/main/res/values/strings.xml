@@ -59,4 +59,5 @@
     <string name="phone_number_of_user">Phone</string>
     <string name="dob_of_user">Dob</string>
     <string name="gender_of_user">Gender</string>
+    <string name="id_for_room_db">id</string>
 </resources>

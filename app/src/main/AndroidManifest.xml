@@ -16,10 +16,10 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
-            android:name=".roomDb.RoomDbActivity"
+            android:name=".roomDb.activity.RoomDbActivity"
             android:exported="false" />
         <activity
-            android:name=".retrofit.RandomUserActivity"
+            android:name=".retrofit.activity.RandomUserActivity"
             android:exported="false" />
         <activity
             android:name=".liveData.view.MainView"
@@ -40,7 +40,7 @@
             android:name=".database.SharedPref"
             android:exported="false" />
         <activity
-            android:name=".fragmentLifeCycle.FragmentLifeCycle"
+            android:name=".fragmentLifeCycle.activity.FragmentLifeCycle"
             android:exported="false" />
         <activity
             android:name=".activityLifeCycle.ActivityB"
@@ -52,7 +52,7 @@
             android:name=".activityLifeCycle.ActivityLifeCycle"
             android:exported="false" />
         <activity
-            android:name=".recyclerView.RecyclerViewActivity"
+            android:name=".recyclerView.activity.RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

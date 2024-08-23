@@ -18,7 +18,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="@string/fragment1" />
+            android:text="@string/fragment_1_text" />
 
         <TextView
             android:id="@+id/txtView_intent_data"

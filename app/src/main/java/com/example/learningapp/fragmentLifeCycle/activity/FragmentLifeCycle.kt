@@ -1,4 +1,4 @@
-package com.example.learningapp.fragmentLifeCycle
+package com.example.learningapp.fragmentLifeCycle.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

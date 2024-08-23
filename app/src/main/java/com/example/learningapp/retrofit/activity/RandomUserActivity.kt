@@ -1,4 +1,4 @@
-package com.example.learningapp.retrofit
+package com.example.learningapp.retrofit.activity
 
 import android.os.Bundle
 import android.util.Log

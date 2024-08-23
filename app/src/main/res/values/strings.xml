@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Learning App</string>
-    <string name="id_nation">ID Nation</string>
+    <string name="id_of_the_nation">ID Nation</string>
     <string name="_4512u">4512U</string>
     <string name="nation">Nation</string>
     <string name="usa">USA</string>
@@ -16,17 +16,15 @@
     <string name="fragment_life_cycle">Fragment Life-Cycle</string>
     <string name="fragment_2">Fragment 2</string>
     <string name="fragment_1">Fragment 1</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="fragment2">Fragment 2</string>
-    <string name="fragment1">Fragment 1</string>
+    <string name="fragment_2_text">Fragment 2</string>
+
+    <string name="fragment_1_text">Fragment 1</string>
     <string name="sharedpref">SharedPref</string>
     <string name="sharedprefToolbar">SharedPref</string>
-    <string name="broadcastreceiver">BroadcastReceiver</string>
-    <string name="turn_on_off_flight_mode_to_see_the_toast">Turn On/Off flight mode to see the toast</string>
+    <string name="broadcast_receiver">BroadcastReceiver</string>
+    <string name="toast_info_text">Turn On/Off flight mode to see the toast</string>
     <string name="view_pager">View Pager</string>
     <string name="onboarding_first_screen">OnBoarding First Screen</string>
-    <string name="_10">10</string>
     <string name="result">Result</string>
     <string name="mvvm">Mvvm</string>
     <string name="simple_calculator_using_mvvm_architecture">Simple Calculator Using MVVM Architecture</string>
@@ -35,21 +33,30 @@
     <string name="sample">sample</string>
     <string name="next">Next</string>
     <string name="get_start">Get Start</string>
-    <string name="update">Update</string>
-    <string name="live_data_textview">Live Data TextView</string>
-    <string name="livedata">LiveData</string>
+
+<!--    Live Data Test String Resources-->
+    <string name="update_btn_textView_text">Update</string>
+    <string name="textView_live_data">Live Data TextView</string>
+    <string name="livedata_textView_text">LiveData</string>
     <string name="retrofit_mvvm">Retrofit + MVVM</string>
-    <string name="activity_to_showcase_how_the_broadcast_listner_works">Activity To ShowCase how the Broadcast Listner Works</string>
-    <string name="activity_to_showcase_working_of_viewpager">Activity To ShowCase Working of ViewPager</string>
-    <string name="activity_to_showcase_the_implementation_of_livedata_using_mvvm_model">Activity to showCase the implementation of LiveData using Mvvm model</string>
-    <string name="activity_to_showcase_how_to_fetch_data_using_retrofit_mvvm_check_log_apidata_as_of_now">Activity To ShowCase how to fetch Data using Retrofit + MVVM check log : ApiData : as of now</string>
+
+
+<!--    Other string for userInfo-->
+    <string name="broadcast_listener_info_text">Activity To ShowCase how the Broadcast Listener Works</string>
+    <string name="viewpage_info_text">Activity To ShowCase Working of ViewPager</string>
+    <string name="livedata_using_mvvm_page_info_text">Activity to showCase the implementation of LiveData using Mvvm model</string>
+    <string name="retrofit_page_info_text">Activity To ShowCase how to fetch Data using Retrofit + MVVM check log : ApiData : as of now</string>
     <string name="activity_to_showcase_the_sharedpref_and_use_of_application_class_for_global_declaration">Activity to showCase the SharedPref and use of Application class for Global declaration</string>
     <string name="room_database">Room Database</string>
     <string name="activity_to_showcase_roomdatabase_check_log_roomdata_as_of_now">Activity To showCase RoomDatabase , check log : RoomData : as of now</string>
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="location">Location</string>
-    <string name="phone">Phone</string>
-    <string name="dob">Dob</string>
-    <string name="gender">Gender</string>
+
+
+
+<!--String resource of RandomUser Api Data -->
+    <string name="name_of_user">Name</string>
+    <string name="email_of_user">Email</string>
+    <string name="location_of_user">Location</string>
+    <string name="phone_number_of_user">Phone</string>
+    <string name="dob_of_user">Dob</string>
+    <string name="gender_of_user">Gender</string>
 </resources>

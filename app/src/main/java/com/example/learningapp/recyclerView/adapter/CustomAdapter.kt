@@ -1,4 +1,4 @@
-package com.example.learningapp.recyclerView
+package com.example.learningapp.recyclerView.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.learningapp.R
+import com.example.learningapp.recyclerView.model.ApiData
 
 
 class CustomAdapter(private val dataSet: Array<ApiData>) :

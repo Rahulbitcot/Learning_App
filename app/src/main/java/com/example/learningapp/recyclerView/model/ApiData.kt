@@ -1,4 +1,4 @@
-package com.example.learningapp.recyclerView
+package com.example.learningapp.recyclerView.model
 
 
 //ID Nation": "01000US",

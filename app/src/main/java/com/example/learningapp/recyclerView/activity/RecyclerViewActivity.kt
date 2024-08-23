@@ -1,4 +1,4 @@
-package com.example.learningapp.recyclerView
+package com.example.learningapp.recyclerView.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.learningapp.MainActivity
 import com.example.learningapp.R
 import com.example.learningapp.databinding.ActivityRecyclerViewBinding
+import com.example.learningapp.recyclerView.adapter.CustomAdapter
+import com.example.learningapp.recyclerView.model.ApiData
 
 class RecyclerViewActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRecyclerViewBinding

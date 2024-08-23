@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/id_nation"
+                android:text="@string/id_of_the_nation"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/txt_Email"

@@ -1,4 +1,4 @@
-package com.example.learningapp.roomDb
+package com.example.learningapp.roomDb.activity
 
 import android.os.Bundle
 import android.util.Log

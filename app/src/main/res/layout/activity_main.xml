@@ -30,7 +30,7 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:text="@string/recycler_view"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/activity_life_cycle"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btRecyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/fragment_life_cycle"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btActivityLifecycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/sharedpref"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btFragmentLifeCycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -70,17 +70,18 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/broadcast_receiver"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btSharedPref"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btViewPager"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/view_pager"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/btSharedPref"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btBroadcastReceiver"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -89,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/mvvm"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btViewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -99,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/livedata_textView_text"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btMvvm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -108,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/retrofit_mvvm"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btLiveData"
         app:layout_constraintStart_toStartOf="@+id/btLiveData"
         app:layout_constraintEnd_toEndOf="@+id/btLiveData"/>
@@ -118,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/room_database"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/btRetrofit"
         app:layout_constraintStart_toStartOf="@+id/btRetrofit"
         app:layout_constraintEnd_toEndOf="@+id/btRetrofit"/>

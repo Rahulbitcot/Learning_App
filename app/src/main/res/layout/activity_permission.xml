@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".permissionHandling.PermissionActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check_storage_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/btn_check_storage_permission_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check_audio_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/btn_check_audio_permission_text"
+        app:layout_constraintStart_toStartOf="@+id/btn_check_storage_permission"
+        app:layout_constraintEnd_toEndOf="@+id/btn_check_storage_permission"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check_storage_permission"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check_notification_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/btn_check_notification_permission_text"
+        app:layout_constraintStart_toStartOf="@+id/btn_check_audio_permission"
+        app:layout_constraintEnd_toEndOf="@+id/btn_check_audio_permission"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check_audio_permission"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_camera_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/btn_check_camera_permission_text"
+        app:layout_constraintStart_toStartOf="@+id/btn_check_notification_permission"
+        app:layout_constraintEnd_toEndOf="@+id/btn_check_notification_permission"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check_notification_permission"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

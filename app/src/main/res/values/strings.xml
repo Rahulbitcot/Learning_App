@@ -34,14 +34,14 @@
     <string name="next">Next</string>
     <string name="get_start">Get Start</string>
 
-<!--    Live Data Test String Resources-->
+    <!--    Live Data Test String Resources-->
     <string name="update_btn_textView_text">Update</string>
     <string name="textView_live_data">Live Data TextView</string>
     <string name="livedata_textView_text">LiveData</string>
     <string name="retrofit_mvvm">Retrofit + MVVM</string>
 
 
-<!--    Other string for userInfo-->
+    <!--    Other string for userInfo-->
     <string name="broadcast_listener_info_text">Activity To ShowCase how the Broadcast Listener Works</string>
     <string name="viewpage_info_text">Activity To ShowCase Working of ViewPager</string>
     <string name="livedata_using_mvvm_page_info_text">Activity to showCase the implementation of LiveData using Mvvm model</string>
@@ -51,8 +51,7 @@
     <string name="activity_to_showcase_roomdatabase_check_log_roomdata_as_of_now">Activity To showCase RoomDatabase , check log : RoomData : as of now</string>
 
 
-
-<!--String resource of RandomUser Api Data -->
+    <!--String resource of RandomUser Api Data -->
     <string name="name_of_user">Name</string>
     <string name="email_of_user">Email</string>
     <string name="location_of_user">Location</string>
@@ -60,4 +59,9 @@
     <string name="dob_of_user">Dob</string>
     <string name="gender_of_user">Gender</string>
     <string name="id_for_room_db">id</string>
+    <string name="btn_check_storage_permission_text">Check Storage Permission</string>
+    <string name="btn_check_audio_permission_text">Check Audio Permission</string>
+    <string name="btn_check_notification_permission_text">Check Notification Permission</string>
+    <string name="btn_check_camera_permission_text">Check Camera Permission</string>
+    <string name="bt_permission_handling_text">Permission Handling</string>
 </resources>

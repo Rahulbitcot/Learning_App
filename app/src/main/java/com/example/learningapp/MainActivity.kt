@@ -12,6 +12,7 @@ import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
 import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.mvvm.view.ViewActivity
+import com.example.learningapp.permissionHandling.PermissionActivity
 import com.example.learningapp.roomDb.activity.RoomDbActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
 import com.google.android.material.button.MaterialButton
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btLiveData , MainView::class.java )
         onBtnClick(binding.btRetrofit , RandomUserActivity::class.java )
         onBtnClick(binding.btRoomDb , RoomDbActivity::class.java )
+        onBtnClick(binding.btPermissionHandling , PermissionActivity::class.java )
+
 
 
     }

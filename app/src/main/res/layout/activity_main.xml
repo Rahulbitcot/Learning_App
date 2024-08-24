@@ -124,4 +124,15 @@
         app:layout_constraintStart_toStartOf="@+id/btRetrofit"
         app:layout_constraintEnd_toEndOf="@+id/btRetrofit"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btPermissionHandling"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/bt_permission_handling_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btRoomDb"
+        app:layout_constraintStart_toStartOf="@+id/btRoomDb"
+        app:layout_constraintEnd_toEndOf="@+id/btRoomDb"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -134,5 +134,15 @@
         app:layout_constraintStart_toStartOf="@+id/btRoomDb"
         app:layout_constraintEnd_toEndOf="@+id/btRoomDb"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btCoroutines"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/bt_coroutines_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btPermissionHandling"
+        app:layout_constraintStart_toStartOf="@+id/btPermissionHandling"
+        app:layout_constraintEnd_toEndOf="@+id/btPermissionHandling"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

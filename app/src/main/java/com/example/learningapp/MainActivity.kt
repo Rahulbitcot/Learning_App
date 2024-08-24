@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
 import com.example.learningapp.retrofit.activity.RandomUserActivity
 import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
+import com.example.learningapp.coroutines.CoroutinesActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
@@ -37,8 +38,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btRetrofit , RandomUserActivity::class.java )
         onBtnClick(binding.btRoomDb , RoomDbActivity::class.java )
         onBtnClick(binding.btPermissionHandling , PermissionActivity::class.java )
-
-
+        onBtnClick(binding.btCoroutines , CoroutinesActivity::class.java )
 
     }
 

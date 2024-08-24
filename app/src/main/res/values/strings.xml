@@ -64,4 +64,5 @@
     <string name="btn_check_notification_permission_text">Check Notification Permission</string>
     <string name="btn_check_camera_permission_text">Check Camera Permission</string>
     <string name="bt_permission_handling_text">Permission Handling</string>
+    <string name="bt_coroutines_text">Coroutines</string>
 </resources>

@@ -18,7 +18,7 @@ class ViewActivity : AppCompatActivity() {
 
         binding.btResult.setOnClickListener {
             val num1 = binding.editTxtNum1.text.toString().toIntOrNull() ?: 0
-            val num2 = binding.editTxtNum1.text.toString().toIntOrNull() ?: 0
+            val num2 = binding.editTxtNum2.text.toString().toIntOrNull() ?: 0
 
             val result = calculatorViewModel.result(num1, num2)
             binding.txtViewResult.text = buildString {

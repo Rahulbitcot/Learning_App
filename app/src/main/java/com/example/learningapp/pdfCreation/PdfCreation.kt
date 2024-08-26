@@ -8,11 +8,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,7 +43,6 @@ class PdfCreation : AppCompatActivity() {
                 Intent.createChooser(intent, "Select Picture"),
                 101
             )
-
         }
 
         binding.btSavePdf.setOnClickListener{
@@ -78,6 +76,8 @@ class PdfCreation : AppCompatActivity() {
                 pdfAdapter = PdfAdapter(selectedImageUris)
                 binding.pdfRecyclerView.layoutManager = LinearLayoutManager(this)
                 binding.pdfRecyclerView.adapter = pdfAdapter
+                binding.pdfRecyclerView.visibility = View.VISIBLE
+                binding.infoText.visibility = View.GONE
                 pdfAdapter.updateData(selectedImageUris)
             }
 
@@ -86,6 +86,8 @@ class PdfCreation : AppCompatActivity() {
                 val directoryUri = data?.data ?: return
                 createPdfFromImages(directoryUri)
                 selectedImageUris.clear()
+                binding.pdfRecyclerView.visibility = View.GONE
+                binding.infoText.visibility = View.VISIBLE
                 pdfAdapter.updateData(selectedImageUris)
             }
         }

@@ -2,5 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Toolbar">#ED0D0D</color>
+
     <color name="random_user_item_cardBg">#EFDFC6</color>
 </resources>

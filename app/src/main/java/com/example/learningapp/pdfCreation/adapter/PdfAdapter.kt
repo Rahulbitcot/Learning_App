@@ -12,8 +12,8 @@ import com.example.learningapp.R
 class PdfAdapter(private var pdfImage : List<Uri>) : RecyclerView.Adapter<PdfAdapter.ViewHolder>() {
 
        class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
-              val imageView = view.findViewById<ImageView>(R.id.image)
-              val txt_pageNo = view.findViewById<TextView>(R.id.txt_pageNo)
+              val imageView: ImageView = view.findViewById(R.id.image)
+              val txtPageNo: TextView = view.findViewById(R.id.txt_pageNo)
        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,7 +29,7 @@ class PdfAdapter(private var pdfImage : List<Uri>) : RecyclerView.Adapter<PdfAda
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       val item = pdfImage[position]
         holder.imageView.setImageURI(item)
-        holder.txt_pageNo.text = "Page No :".plus(position + 1)
+        holder.txtPageNo.text = "Page No :".plus(position + 1)
     }
 
     fun updateData(newResults: List<Uri>) {

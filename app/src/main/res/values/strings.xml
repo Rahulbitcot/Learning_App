@@ -68,4 +68,7 @@
     <string name="btn_create_pdf_text">Create Pdf</string>
     <string name="bt_select_images_from_gallery_text">Select Images From Gallery</string>
     <string name="bt_view_pdf_text">View Pdf</string>
+    <string name="pdfCreation_toolbar_text">Pdf Generator</string>
+    <string name="save_pdf">Save Pdf</string>
+    <string name="save_pdf_txt">Save Pdf</string>
 </resources>

@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.learningapp.databinding.ActivityCoroutinesBinding
-import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -22,11 +21,11 @@ class CoroutinesActivity : AppCompatActivity() {
        lifecycleScope.launch {
             var counter = 0
             while (counter<100000) {
-                binding.txtViewCounter.text = "Counter: $counter"
+                val counterTxt = "counter : "
+                binding.txtViewCounter.text = counterTxt.plus(counter)
                 counter++
                 delay(100)
             }
         }
-//        job.cancel()
     }
 }

@@ -78,5 +78,6 @@ dependencies {
     kapt (libs.com.squareup.moshi.moshi.kotlin.codegen)
     implementation (libs.sdp.android)
     implementation (libs.ssp.android)
+    implementation (libs.itextpdf)
 }
 

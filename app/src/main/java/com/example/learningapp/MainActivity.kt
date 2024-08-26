@@ -13,6 +13,7 @@ import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
 import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.mvvm.view.ViewActivity
+import com.example.learningapp.pdfCreation.PdfCreation
 import com.example.learningapp.permissionHandling.PermissionActivity
 import com.example.learningapp.roomDb.activity.RoomDbActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btRoomDb , RoomDbActivity::class.java )
         onBtnClick(binding.btPermissionHandling , PermissionActivity::class.java )
         onBtnClick(binding.btCoroutines , CoroutinesActivity::class.java )
+        onBtnClick(binding.btPdf , PdfCreation::class.java )
+
 
     }
 

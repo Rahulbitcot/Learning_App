@@ -65,4 +65,7 @@
     <string name="btn_check_camera_permission_text">Check Camera Permission</string>
     <string name="bt_permission_handling_text">Permission Handling</string>
     <string name="bt_coroutines_text">Coroutines</string>
+    <string name="btn_create_pdf_text">Create Pdf</string>
+    <string name="bt_select_images_from_gallery_text">Select Images From Gallery</string>
+    <string name="bt_view_pdf_text">View Pdf</string>
 </resources>

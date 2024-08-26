@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/learning_app"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="40dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/learning_app"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btRecyclerView"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:text="@string/recycler_view"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -40,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/activity_life_cycle"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btRecyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -50,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/fragment_life_cycle"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btActivityLifecycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -60,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/sharedpref"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btFragmentLifeCycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -70,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/broadcast_receiver"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btSharedPref"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -80,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/view_pager"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btBroadcastReceiver"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -90,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/mvvm"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btViewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -100,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/livedata_textView_text"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btMvvm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -109,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/retrofit_mvvm"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btLiveData"
         app:layout_constraintStart_toStartOf="@+id/btLiveData"
         app:layout_constraintEnd_toEndOf="@+id/btLiveData"/>
@@ -119,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/room_database"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btRetrofit"
         app:layout_constraintStart_toStartOf="@+id/btRetrofit"
         app:layout_constraintEnd_toEndOf="@+id/btRetrofit"/>
@@ -129,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/bt_permission_handling_text"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btRoomDb"
         app:layout_constraintStart_toStartOf="@+id/btRoomDb"
         app:layout_constraintEnd_toEndOf="@+id/btRoomDb"/>
@@ -139,10 +145,20 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/bt_coroutines_text"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btPermissionHandling"
         app:layout_constraintStart_toStartOf="@+id/btPermissionHandling"
         app:layout_constraintEnd_toEndOf="@+id/btPermissionHandling"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/btn_create_pdf_text"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btCoroutines"
+            app:layout_constraintStart_toStartOf="@+id/btCoroutines"
+            app:layout_constraintEnd_toEndOf="@+id/btCoroutines"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

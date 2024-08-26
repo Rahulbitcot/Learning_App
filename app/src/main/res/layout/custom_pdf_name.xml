@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:backgroundTint="#EDC1C1"
+           android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtView_RenamePdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rename Pdf"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+           <EditText
+               android:id="@+id/txt_pdfName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:maxLength="15"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginEnd="5dp"
+               android:hint="abc2014.pdf"
+               android:layout_marginTop="10dp"
+               android:textColor="@color/black"
+               app:layout_constraintTop_toBottomOf="@+id/txtView_RenamePdf"
+               android:layout_marginStart="20sp"
+               app:layout_constraintStart_toStartOf="parent"/>
+
+           <Button
+               android:id="@+id/btnSavePdf"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Save Pdf"
+               android:layout_marginBottom="10dp"
+               android:backgroundTint="@color/black"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/txt_pdfName"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginTop="10dp"/>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

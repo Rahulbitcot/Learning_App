@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btBack"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:text="@string/back_button"
         android:backgroundTint="@color/black"

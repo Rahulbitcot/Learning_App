@@ -22,7 +22,7 @@
         android:id="@+id/txtView_RenamePdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rename Pdf"
+        android:text="Name your Pdf"
         android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,29 +31,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-           <EditText
-               android:id="@+id/txt_pdfName"
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/txtInputLayout"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:maxLength="15"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="20dp"
                app:layout_constraintEnd_toEndOf="parent"
-               android:layout_marginEnd="5dp"
-               android:hint="abc2014.pdf"
-               android:layout_marginTop="10dp"
-               app:layout_constraintTop_toBottomOf="@+id/txtView_RenamePdf"
-               android:layout_marginStart="20sp"
-               app:layout_constraintStart_toStartOf="parent"/>
+               app:layout_constraintStart_toStartOf="parent"
+               android:hint="Save AS "
+               app:layout_constraintTop_toBottomOf="@+id/txtView_RenamePdf">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_pdfName"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:maxLength="15" />
+           </com.google.android.material.textfield.TextInputLayout>
+
 
            <Button
                android:id="@+id/btnSavePdf"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Save Pdf"
+               android:text="Done"
                android:layout_marginBottom="10dp"
                android:backgroundTint="@color/black"
                android:textColor="@color/white"
                app:layout_constraintBottom_toBottomOf="parent"
-               app:layout_constraintTop_toBottomOf="@+id/txt_pdfName"
+               app:layout_constraintTop_toBottomOf="@+id/txtInputLayout"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
                android:layout_marginTop="10dp"/>

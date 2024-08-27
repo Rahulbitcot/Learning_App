@@ -79,5 +79,6 @@ dependencies {
     implementation (libs.sdp.android)
     implementation (libs.ssp.android)
     implementation (libs.itextpdf)
+    implementation (libs.shimmer)
 }
 

@@ -71,4 +71,19 @@
     <string name="pdfCreation_toolbar_text">Pdf Generator</string>
     <string name="save_pdf">Save Pdf</string>
     <string name="save_pdf_txt">Save Pdf</string>
+    <string name="bt_shimmer_effect_txt">Shimmer Effect</string>
+    <string name="bg_image">bg Iamge</string>
+    <string name="text_subHeading">lets start the day with meditation</string>
+    <string name="good_morning">Good Morning !</string>
+    <string name="see_my_statistics">See My statistics</string>
+    <string name="you_ve_finished_the_meditation">You\'ve finished the Meditation !</string>
+    <string name="todo">TODO</string>
+    <string name="become_as_calm_as_cat">Become As Calm As Cat</string>
+    <string name="_21_min">21 Min</string>
+    <string name="choose_by_your_mood">Choose by your mood</string>
+    <string name="calm_img">calm Img</string>
+    <string name="calm">Calm</string>
+    <string name="curious">Curious</string>
+    <string name="sleepy">Sleepy</string>
+    <string name="anxious">anxious</string>
 </resources>

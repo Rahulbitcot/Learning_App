@@ -33,6 +33,15 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".shimmerEffect.ThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shimmerEffect.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shimmerEffect.MainShimmerEffectActivity"
+            android:exported="false" />
+        <activity
             android:name=".pdfCreation.PdfCreation"
             android:exported="false" />
         <activity

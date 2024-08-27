@@ -16,6 +16,7 @@ import com.example.learningapp.mvvm.view.ViewActivity
 import com.example.learningapp.pdfCreation.PdfCreation
 import com.example.learningapp.permissionHandling.PermissionActivity
 import com.example.learningapp.roomDb.activity.RoomDbActivity
+import com.example.learningapp.shimmerEffect.MainShimmerEffectActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
 import com.google.android.material.button.MaterialButton
 
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btPermissionHandling , PermissionActivity::class.java )
         onBtnClick(binding.btCoroutines , CoroutinesActivity::class.java )
         onBtnClick(binding.btPdf , PdfCreation::class.java )
+        onBtnClick(binding.btShimmerEffect , MainShimmerEffectActivity::class.java )
 
 
     }

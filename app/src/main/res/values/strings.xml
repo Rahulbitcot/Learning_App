@@ -86,4 +86,5 @@
     <string name="curious">Curious</string>
     <string name="sleepy">Sleepy</string>
     <string name="anxious">anxious</string>
+    <string name="bt_side_navigation_bar_txt">Side Navigation Bar</string>
 </resources>

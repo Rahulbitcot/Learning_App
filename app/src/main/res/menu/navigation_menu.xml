@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/id_shared"
+        android:icon="@drawable/baseline_people_24"
+        android:title="Shared with me"/>
+    <item
+        android:id="@+id/id_recent"
+        android:icon="@drawable/baseline_access_time_24"
+        android:title="Recent"/>
+    <item
+        android:id="@+id/id_trash"
+        android:icon="@drawable/baseline_restore_from_trash_24"
+        android:title="Trash"/>
+    </group>
+
+    <group android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/id_setting"
+            android:icon="@drawable/baseline_settings_24"
+            android:title="Setting">
+        </item>
+    </group>
+</menu>

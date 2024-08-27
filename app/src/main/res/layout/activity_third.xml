@@ -185,6 +185,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
+                android:textColor="@color/black"
                 android:text="@string/become_as_calm_as_cat"
                 android:textSize="26sp"
                 android:textStyle="bold"
@@ -252,11 +253,11 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                style="@style/MediumFont16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/calm"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/imageView_calm"
@@ -293,7 +294,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                style="@style/MediumFont16"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -334,7 +335,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                style="@style/MediumFont16"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -375,7 +376,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                style="@style/MediumFont16"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

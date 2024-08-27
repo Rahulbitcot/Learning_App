@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                style="@style/MediumFont15"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:text="Side Navigation Menu"/>

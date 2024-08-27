@@ -84,8 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_gravity="center_vertical"
-            android:text="21 minutes"
-            android:textColor="@color/black"/>
+            android:text="21 minutes" />
     </LinearLayout>
 
     <LinearLayout
@@ -111,8 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_gravity="center_vertical"
-            android:text="1040 user save file"
-            android:textColor="@color/black"/>
+            android:text="1040 user save file" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton

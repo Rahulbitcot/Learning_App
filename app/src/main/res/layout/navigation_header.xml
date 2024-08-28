@@ -18,7 +18,7 @@
         android:src="@drawable/sleep"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="20dp"/>
+        android:layout_margin="25dp"/>
         <TextView
             style="@style/MediumFont14"
             android:layout_width="wrap_content"

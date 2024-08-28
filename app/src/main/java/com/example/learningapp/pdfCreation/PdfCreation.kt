@@ -3,25 +3,19 @@ package com.example.learningapp.pdfCreation
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.learningapp.R
 import com.example.learningapp.databinding.ActivityPdfCreationBinding
 import com.example.learningapp.pdfCreation.adapter.PdfAdapter
-import com.itextpdf.text.Document
-import com.itextpdf.text.Image
-import com.itextpdf.text.pdf.PdfWriter
-import java.io.ByteArrayOutputStream
+import com.example.learningapp.pdfCreation.pdfUtils.CreatePdfUtil
 
 class PdfCreation : AppCompatActivity() {
     private lateinit var binding: ActivityPdfCreationBinding
@@ -81,53 +75,15 @@ class PdfCreation : AppCompatActivity() {
                 pdfAdapter.updateData(selectedImageUris)
             }
 
-
             if (requestCode == 102 && resultCode == RESULT_OK) {
                 val directoryUri = data?.data ?: return
-                createPdfFromImages(directoryUri)
+                CreatePdfUtil.createPdfFromImages(contentResolver,directoryUri, pdfName,selectedImageUris,applicationContext)
                 selectedImageUris.clear()
                 binding.pdfRecyclerView.visibility = View.GONE
                 binding.infoText.visibility = View.VISIBLE
                 pdfAdapter.updateData(selectedImageUris)
             }
         }
-
-    private fun createPdfFromImages(directoryUri: Uri) {
-        val document = Document()
-//        val pdfFileName = "Images_${System.currentTimeMillis()}.pdf"
-        val documentFile = DocumentFile.fromTreeUri(this, directoryUri)
-        val pdfFile = documentFile?.createFile("application/pdf", pdfName)
-
-        if (pdfFile != null) {
-            val outputStream = contentResolver.openOutputStream(pdfFile.uri)
-            if (outputStream != null) {
-                PdfWriter.getInstance(document, outputStream)
-                document.open()
-
-                for (imageUri in selectedImageUris) {
-                    val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
-                    val image = Image.getInstance(bitmapToByteArray(bitmap))
-                    image.scaleToFit(document.pageSize.width, document.pageSize.height)
-                    document.add(image)
-                }
-                document.close()
-                outputStream.close()
-
-                Toast.makeText(this, "PDF saved to ${pdfFile.uri}", Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(this, "Failed to open output stream", Toast.LENGTH_SHORT).show()
-            }
-        } else {
-            Toast.makeText(this, "Failed to create PDF", Toast.LENGTH_SHORT).show()
-        }
-
-    }
-
-    private fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
-        val stream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
-        return stream.toByteArray()
-    }
 
     private fun showSavePdfDialog() {
         val dialog = Dialog(this)

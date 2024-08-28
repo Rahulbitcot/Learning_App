@@ -33,7 +33,7 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
-            android:name=".sideNavigationBar.SideNavigationActivity"
+            android:name=".sideAndBottomNavigationBar.SideAndBottomNavigationActivity"
             android:exported="false" />
         <activity
             android:name=".shimmerEffect.ThirdActivity"
@@ -92,6 +92,9 @@
         <activity
             android:name=".recyclerView.activity.RecyclerViewActivity"
             android:exported="false" />
+
+        <activity android:name=".lottieAnimations.LottieAnimation"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

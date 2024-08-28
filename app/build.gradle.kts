@@ -80,5 +80,7 @@ dependencies {
     implementation (libs.ssp.android)
     implementation (libs.itextpdf)
     implementation (libs.shimmer)
+    implementation(libs.lottie)
+
 }
 

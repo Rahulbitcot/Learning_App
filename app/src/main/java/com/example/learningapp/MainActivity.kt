@@ -12,12 +12,13 @@ import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
 import com.example.learningapp.liveData.view.MainView
+import com.example.learningapp.lottieAnimations.LottieAnimation
 import com.example.learningapp.mvvm.view.ViewActivity
 import com.example.learningapp.pdfCreation.PdfCreation
 import com.example.learningapp.permissionHandling.PermissionActivity
 import com.example.learningapp.roomDb.activity.RoomDbActivity
 import com.example.learningapp.shimmerEffect.MainShimmerEffectActivity
-import com.example.learningapp.sideNavigationBar.SideNavigationActivity
+import com.example.learningapp.sideAndBottomNavigationBar.SideAndBottomNavigationActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
 import com.google.android.material.button.MaterialButton
 
@@ -44,7 +45,9 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btCoroutines , CoroutinesActivity::class.java )
         onBtnClick(binding.btPdf , PdfCreation::class.java )
         onBtnClick(binding.btShimmerEffect , MainShimmerEffectActivity::class.java )
-        onBtnClick(binding.btSideNavigationBar , SideNavigationActivity::class.java )
+        onBtnClick(binding.btSideNavigationBar , SideAndBottomNavigationActivity::class.java )
+        onBtnClick(binding.btLottieAnimation , LottieAnimation::class.java )
+
     }
 
     private fun onBtnClick(btn : MaterialButton, targetActivity: Class<out AppCompatActivity>){

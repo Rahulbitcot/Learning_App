@@ -48,7 +48,7 @@ class PdfCreation : AppCompatActivity() {
         }
    }
 
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             super.onActivityResult(requestCode, resultCode, data)
 
             if (requestCode == 101 && resultCode == RESULT_OK) {
@@ -77,7 +77,7 @@ class PdfCreation : AppCompatActivity() {
 
             if (requestCode == 102 && resultCode == RESULT_OK) {
                 val directoryUri = data?.data ?: return
-                CreatePdfUtil.createPdfFromImages(contentResolver,directoryUri, pdfName,selectedImageUris,applicationContext)
+                CreatePdfUtil.createPdfFromImages(contentResolver,pdfName,directoryUri,selectedImageUris,applicationContext)
                 selectedImageUris.clear()
                 binding.pdfRecyclerView.visibility = View.GONE
                 binding.infoText.visibility = View.VISIBLE

@@ -179,5 +179,16 @@
             app:layout_constraintTop_toBottomOf="@+id/btShimmerEffect"
             app:layout_constraintStart_toStartOf="@+id/btShimmerEffect"
             app:layout_constraintEnd_toEndOf="@+id/btShimmerEffect"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btLottieAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/bt_lottieanimation_txt"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btSideNavigationBar"
+            app:layout_constraintStart_toStartOf="@+id/btSideNavigationBar"
+            app:layout_constraintEnd_toEndOf="@+id/btSideNavigationBar"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

@@ -14,9 +14,9 @@ import java.io.ByteArrayOutputStream
 
 
 class CreatePdfUtil {
-
     companion object{
-        fun createPdfFromImages(contentResolver : ContentResolver,directoryUri: Uri , pdfName : String ,selectedImageUris : List<Uri> , context : Context) {
+
+        fun createPdfFromImages(contentResolver : ContentResolver,pdfName:String,directoryUri: Uri ,selectedImageUris : List<Uri> , context : Context) {
             val document = Document()
             val documentFile = DocumentFile.fromTreeUri(context, directoryUri)
             val pdfFile = documentFile?.createFile("application/pdf", pdfName)

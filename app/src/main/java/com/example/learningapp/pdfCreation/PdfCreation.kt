@@ -16,6 +16,10 @@ import com.example.learningapp.R
 import com.example.learningapp.databinding.ActivityPdfCreationBinding
 import com.example.learningapp.pdfCreation.adapter.PdfAdapter
 import com.example.learningapp.pdfCreation.pdfUtils.CreatePdfUtil
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PdfCreation : AppCompatActivity() {
     private lateinit var binding: ActivityPdfCreationBinding
@@ -48,42 +52,46 @@ class PdfCreation : AppCompatActivity() {
         }
    }
 
+    @Deprecated("This method has been deprecated in favor of using the Activity Result API\n      which brings increased type safety via an {@link ActivityResultContract} and the prebuilt\n      contracts for common intents available in\n      {@link androidx.activity.result.contract.ActivityResultContracts}, provides hooks for\n      testing, and allow receiving results in separate, testable classes independent from your\n      activity. Use\n      {@link #registerForActivityResult(ActivityResultContract, ActivityResultCallback)}\n      with the appropriate {@link ActivityResultContract} and handling the result in the\n      {@link ActivityResultCallback#onActivityResult(Object) callback}.")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             super.onActivityResult(requestCode, resultCode, data)
 
-            if (requestCode == 101 && resultCode == RESULT_OK) {
-                val clipData = data?.clipData
-                if (clipData != null) {
-                    for (i in 0 until clipData.itemCount) {
-                        selectedImageUris.add(clipData.getItemAt(i).uri)
-                    }
-                } else {
-                    val uri = data?.data
-                    if (uri != null) {
-                        selectedImageUris.add(uri)
-                    }
+        if (requestCode == 101 && resultCode == RESULT_OK) {
+            //For multiple Images
+            val clipData = data?.clipData
+            if (clipData != null) {
+                for (i in 0 until clipData.itemCount) {
+                    selectedImageUris.add(clipData.getItemAt(i).uri)
                 }
-
-                Toast.makeText(this, "${selectedImageUris.size} Images Selected", Toast.LENGTH_LONG)
-                    .show()
-
-                pdfAdapter = PdfAdapter(selectedImageUris)
-                binding.pdfRecyclerView.layoutManager = LinearLayoutManager(this)
-                binding.pdfRecyclerView.adapter = pdfAdapter
-                binding.pdfRecyclerView.visibility = View.VISIBLE
-                binding.infoText.visibility = View.GONE
-                pdfAdapter.updateData(selectedImageUris)
+            } else {
+                //For Single Image
+                val uri = data?.data
+                if (uri != null) {
+                    selectedImageUris.add(uri)
+                }
             }
 
-            if (requestCode == 102 && resultCode == RESULT_OK) {
-                val directoryUri = data?.data ?: return
-                CreatePdfUtil.createPdfFromImages(contentResolver,pdfName,directoryUri,selectedImageUris,applicationContext)
-                selectedImageUris.clear()
-                binding.pdfRecyclerView.visibility = View.GONE
-                binding.infoText.visibility = View.VISIBLE
-                pdfAdapter.updateData(selectedImageUris)
-            }
+            Toast.makeText(this, "${selectedImageUris.size} Images Selected", Toast.LENGTH_LONG)
+                .show()
+
+            updateRecyclerView()
         }
+        if (requestCode == 102 && resultCode == RESULT_OK) {
+            val directoryUri = data?.data ?: return
+            binding.progressBar.visibility = View.VISIBLE
+            //Launch coroutines to make pdf in background
+            createPdfInBackground(directoryUri)
+        }
+    }
+
+    private fun updateRecyclerView() {
+        pdfAdapter = PdfAdapter(selectedImageUris)
+        binding.pdfRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.pdfRecyclerView.adapter = pdfAdapter
+        binding.pdfRecyclerView.visibility = View.VISIBLE
+        binding.infoText.visibility = View.GONE
+        pdfAdapter.updateData(selectedImageUris)
+    }
 
     private fun showSavePdfDialog() {
         val dialog = Dialog(this)
@@ -108,6 +116,24 @@ class PdfCreation : AppCompatActivity() {
             }
         }
         dialog.show()
+    }
+
+    private fun createPdfInBackground(directoryUri : Uri ) {
+        CoroutineScope(Dispatchers.IO).launch {
+            CreatePdfUtil.createPdfFromImages(contentResolver, pdfName, directoryUri, selectedImageUris, applicationContext)
+            withContext(Dispatchers.Main) {
+                // Update UI after PDF creation is complete
+                 resetUi()
+            }
+        }
+    }
+
+    private fun resetUi() {
+        selectedImageUris.clear()
+        binding.pdfRecyclerView.visibility = View.GONE
+        binding.infoText.visibility = View.VISIBLE
+        pdfAdapter.updateData(selectedImageUris)
+        binding.progressBar.visibility = View.GONE
     }
 }
 

@@ -10,7 +10,7 @@ import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
 import com.example.learningapp.coroutines.CoroutinesActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
-import com.example.learningapp.foregroundServices.ForeGroundServices
+import com.example.learningapp.foregroundServices.ForegroundServices
 import com.example.learningapp.workManager.WorkManagerActivity
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
 import com.example.learningapp.liveData.view.MainView
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btShimmerEffect , MainShimmerEffectActivity::class.java )
         onBtnClick(binding.btSideNavigationBar , SideAndBottomNavigationActivity::class.java )
         onBtnClick(binding.btLottieAnimation , LottieAnimation::class.java )
-        onBtnClick(binding.btServices , ForeGroundServices::class.java )
+        onBtnClick(binding.btServices , ForegroundServices::class.java )
         onBtnClick(binding.btWorkManager , WorkManagerActivity::class.java )
 
     }

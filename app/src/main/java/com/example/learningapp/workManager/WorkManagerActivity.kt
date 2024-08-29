@@ -23,6 +23,8 @@ class WorkManagerActivity : AppCompatActivity() {
         if(Build.VERSION.SDK_INT >32) {
             if (!PermissionUtil.checkNotificationPermission(this)) {
                 PermissionUtil.requestNotificationPermission(this, this)
+            }else{
+                startWork()
             }
         }else{
             startWork()

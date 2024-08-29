@@ -8,7 +8,7 @@ import androidx.work.WorkerParameters
 class MyWorkManager(context : Context , params: WorkerParameters): Worker(context , params) {
     override fun doWork(): Result {
           Log.d("workManagerLog" , "workManager started")
-        WorkManagerUtil.generateNotification(applicationContext)
+        WorkManagerUtil.generateNotification(applicationContext , "Work Manager" , "Work Manager is working .....")
         return Result.success()
 
     }

@@ -190,5 +190,26 @@
             app:layout_constraintStart_toStartOf="@+id/btSideNavigationBar"
             app:layout_constraintEnd_toEndOf="@+id/btSideNavigationBar"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btWorkManager"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Work Manager"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btLottieAnimation"
+            app:layout_constraintStart_toStartOf="@+id/btLottieAnimation"
+            app:layout_constraintEnd_toEndOf="@+id/btLottieAnimation"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btServices"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Services"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btWorkManager"
+            app:layout_constraintStart_toStartOf="@+id/btWorkManager"
+            app:layout_constraintEnd_toEndOf="@+id/btWorkManager"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

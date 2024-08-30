@@ -8,9 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.learningapp.R
 import com.example.learningapp.databinding.ActivitySignInWithPhoneNumberBinding
+import com.google.firebase.auth.FirebaseAuth
 
-class SignInWithPhoneNumber : AppCompatActivity() {
+class SignInWithPhoneNumber : AppCompatActivity(){
     private lateinit var binding : ActivitySignInWithPhoneNumberBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,15 +24,20 @@ class SignInWithPhoneNumber : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        auth = FirebaseAuth.getInstance()
         onSubmit()
     }
 
     private fun onSubmit() {
-        binding.btSubmit.setOnClickListener{
-            if (binding.txtPhoneNumber.text?.length!! < 10){
+        binding.btSubmit.setOnClickListener {
+            val phoneNumber = binding.txtPhoneNumber.text.toString().trim()
+            if (phoneNumber.length < 10) {
                 Toast.makeText(this, "Please Enter Valid Number", Toast.LENGTH_LONG).show()
+            } else {
+                val fullNumber = "+91$phoneNumber"
+                LogInWithPhoneNumber.sendVerificationCode(fullNumber, auth, this)
             }
         }
-
     }
+
 }

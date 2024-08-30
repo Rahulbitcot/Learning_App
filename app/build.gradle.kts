@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -58,6 +59,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.firestore.ktx)
     implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.auth.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -82,6 +85,10 @@ dependencies {
     implementation (libs.itextpdf)
     implementation (libs.shimmer)
     implementation(libs.lottie)
+    implementation (libs.firebase.auth.v2200)
+    implementation (libs.play.services.auth)
+    implementation(platform(libs.firebase.bom))
+
 
 }
 

@@ -10,6 +10,7 @@ import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
 import com.example.learningapp.coroutines.CoroutinesActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
+import com.example.learningapp.firebase.FirebaseMainActivity
 import com.example.learningapp.foregroundServices.ForegroundServices
 import com.example.learningapp.workManager.WorkManagerActivity
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btLottieAnimation , LottieAnimation::class.java )
         onBtnClick(binding.btServices , ForegroundServices::class.java )
         onBtnClick(binding.btWorkManager , WorkManagerActivity::class.java )
+        onBtnClick(binding.btFirebase , FirebaseMainActivity::class.java )
+
 
     }
 

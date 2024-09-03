@@ -21,7 +21,6 @@ import com.example.learningapp.R
 import com.example.learningapp.databinding.ActivityNfctagBinding
 import java.nio.charset.Charset
 
-
 class NFCTag : AppCompatActivity() {
 
     private lateinit var binding: ActivityNfctagBinding
@@ -117,7 +116,7 @@ class NFCTag : AppCompatActivity() {
                 val ndefFormatable = NdefFormatable.get(tag)
                 if (ndefFormatable != null) {
                     // Format the tag and write the URL
-                    formatTagAndWriteNdef(tag, defaultUrl)
+                    formatTagAndWriteNdef(tag, binding.txtViewUrl.text.toString())
                 } else {
                     Log.e("NFCTag", "Ndef and NdefFormatable are both null or unsupported")
                 }
@@ -126,7 +125,6 @@ class NFCTag : AppCompatActivity() {
             Log.e("NFCTag", "No NFC tag detected")
         }
     }
-
 
     private fun formatTagAndWriteNdef(tag: Tag, url: String) {
         val ndefFormatable = NdefFormatable.get(tag)

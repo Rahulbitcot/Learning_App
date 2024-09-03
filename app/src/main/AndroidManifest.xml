@@ -113,6 +113,25 @@
             android:name=".lottieAnimations.LottieAnimation"
             android:exported="true" />
         <activity
+            android:name=".firebase.FirebaseMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".balloonLibrary.BalloonActivity"
+            android:exported="true" />
+        <activity
+            android:name=".faceDetection.CameraFaceDetection"
+            android:exported="true" />
+        <activity
+            android:name=".firebase.SignInWithPhoneNumber"
+            android:exported="true" />
+        <activity
+            android:name=".firebase.LogInWithPhoneNumber"
+            android:exported="true" />
+        <activity
+            android:name=".firebase.OtpActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

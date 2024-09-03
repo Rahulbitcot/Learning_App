@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
 import com.example.learningapp.retrofit.activity.RandomUserActivity
 import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
+import com.example.learningapp.collapseToolbar.CollapseToolbar
 import com.example.learningapp.coroutines.CoroutinesActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
@@ -16,6 +17,7 @@ import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
 import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.lottieAnimations.LottieAnimation
 import com.example.learningapp.mvvm.view.ViewActivity
+import com.example.learningapp.nfcTag.NFCTag
 import com.example.learningapp.pdfCreation.PdfCreation
 import com.example.learningapp.permissionHandling.PermissionActivity
 import com.example.learningapp.roomDb.activity.RoomDbActivity
@@ -51,6 +53,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btLottieAnimation , LottieAnimation::class.java )
         onBtnClick(binding.btServices , ForegroundServices::class.java )
         onBtnClick(binding.btWorkManager , WorkManagerActivity::class.java )
+        onBtnClick(binding.btNfcTag , NFCTag::class.java )
+        onBtnClick(binding.btCollapse , CollapseToolbar::class.java )
 
     }
 

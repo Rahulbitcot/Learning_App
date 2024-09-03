@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
@@ -21,7 +21,12 @@
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
 
     <application
         android:name=".database.MyApplication"
@@ -34,6 +39,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
+        <activity
+            android:name=".collapseToolbar.CollapseToolbar"
+            android:exported="false" />
         <activity
             android:name=".foregroundServices.ForegroundServices"
             android:exported="false" />
@@ -112,6 +120,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name=".nfcTag.NFCTag"
+            android:exported="true">
+            <!-- Specifies the activity that will handle NFC tags.
+                 The 'exported' attribute is set to true to allow this activity
+                 to be launched by components from other apps. -->
+
+            <intent-filter>
+                <!-- Declares that this activity can respond to NFC tech discovered intents. -->
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <!-- The action filters for NFC tech discovered events. -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- Specifies that this intent filter applies to the default category of intents. -->
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+            <!-- Associates this activity with a specific set of NFC technologies
+                 defined in the 'nfc_tech_filter' XML file, which lists the NFC technologies
+                 that the app is interested in handling. -->
+        </activity>
+
 
         <service
             android:name=".foregroundServices.ForegroundServiceUtil"

@@ -5,12 +5,15 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
+import com.example.learningapp.balloonLibrary.BalloonActivity
 import com.example.learningapp.retrofit.activity.RandomUserActivity
 import com.example.learningapp.broadcast_reciever.BroadcastReceiverActivity
 import com.example.learningapp.collapseToolbar.CollapseToolbar
 import com.example.learningapp.coroutines.CoroutinesActivity
 import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
+import com.example.learningapp.faceDetection.CameraFaceDetection
+import com.example.learningapp.firebase.FirebaseMainActivity
 import com.example.learningapp.foregroundServices.ForegroundServices
 import com.example.learningapp.workManager.WorkManagerActivity
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
@@ -55,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btWorkManager , WorkManagerActivity::class.java )
         onBtnClick(binding.btNfcTag , NFCTag::class.java )
         onBtnClick(binding.btCollapse , CollapseToolbar::class.java )
+        onBtnClick(binding.btFirebase , FirebaseMainActivity::class.java )
+        onBtnClick(binding.btFaceDetection , CameraFaceDetection::class.java )
+        onBtnClick(binding.btBallon , BalloonActivity::class.java )
 
     }
 

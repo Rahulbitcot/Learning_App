@@ -11,6 +11,8 @@ import com.example.learningapp.retrofit.db.UserDatabase
 open class MyApplication : Application() {
      lateinit var sharedPreferences: SharedPreferences
      val COUNTER_KEY = "Counter_Value"
+     val LOG_IN_STATUS = "LOG_IN_STATUS"
+
      private val PREFS_NAME = "learning_app_SharedPref"
      lateinit var userRepository : UserRepository
      lateinit var userDatabase: UserDatabase

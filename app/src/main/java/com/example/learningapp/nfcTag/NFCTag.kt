@@ -3,9 +3,6 @@ package com.example.learningapp.nfcTag
 import android.app.PendingIntent
 import android.content.Intent
 import android.content.IntentFilter
-import android.net.Uri
-import android.nfc.NdefMessage
-import android.nfc.NdefRecord
 import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.tech.Ndef
@@ -19,7 +16,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.learningapp.R
 import com.example.learningapp.databinding.ActivityNfctagBinding
-import java.nio.charset.Charset
+
 
 class NFCTag : AppCompatActivity() {
 
@@ -106,17 +103,31 @@ class NFCTag : AppCompatActivity() {
             val ndef = Ndef.get(tag)
             if (ndef != null) {
                 if (writeMode) {
-                    writeUrlToNfcTag(ndef, binding.txtViewUrl.text.toString())
-                    writeMode = false
-                    Log.d("NFCTag", "Write mode disabled after writing")
+                    if(binding.txtViewUrl.text.toString()!="") {
+                        NfcHelperClass.writeUrlToNfcTag(
+                            ndef,
+                            binding.txtViewUrl.text.toString(),
+                            this
+                        )
+                        writeMode = false
+                        Log.d("NFCTag", "Write mode disabled after writing")
+                    }else{
+                        NfcHelperClass.writeUrlToNfcTag(
+                            ndef,
+                            defaultUrl,
+                            this
+                        )
+                        writeMode = false
+                        Log.d("NFCTag", "Write mode disabled after writing")
+                    }
                 } else {
-                    readNfcTag(ndef)
+                    NfcHelperClass.readNfcTag(ndef,isLive,this)
                 }
             } else {
                 val ndefFormatable = NdefFormatable.get(tag)
                 if (ndefFormatable != null) {
                     // Format the tag and write the URL
-                    formatTagAndWriteNdef(tag, binding.txtViewUrl.text.toString())
+                    NfcHelperClass.formatTagAndWriteNdef(tag, binding.txtViewUrl.text.toString(),this)
                 } else {
                     Log.e("NFCTag", "Ndef and NdefFormatable are both null or unsupported")
                 }
@@ -126,6 +137,8 @@ class NFCTag : AppCompatActivity() {
         }
     }
 
+
+/*
     private fun formatTagAndWriteNdef(tag: Tag, url: String) {
         val ndefFormatable = NdefFormatable.get(tag)
         if (ndefFormatable != null) {
@@ -229,8 +242,9 @@ class NFCTag : AppCompatActivity() {
         } finally {
             ndef.close() // Close the NFC tag connection after writing
             Log.d("NFCTag", "NFC tag connection closed after writing")
-        }
-    }
+//        }
+//    }
+
+    */
+
 }
-
-

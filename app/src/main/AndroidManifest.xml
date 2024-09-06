@@ -41,6 +41,9 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".AdMob.AdmobActivity"
+            android:exported="false" />
+        <activity
             android:name=".collapseToolbar.CollapseToolbar"
             android:exported="false" />
         <activity
@@ -130,7 +133,6 @@
         <activity
             android:name=".firebase.OtpActivity"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -140,16 +142,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".nfcTag.NFCTag"
             android:exported="true">
-            <!-- Specifies the activity that will handle NFC tags.
+
+            <!--
+                 Specifies the activity that will handle NFC tags.
                  The 'exported' attribute is set to true to allow this activity
-                 to be launched by components from other apps. -->
+                 to be launched by components from other apps.
+            -->
 
             <intent-filter>
+
                 <!-- Declares that this activity can respond to NFC tech discovered intents. -->
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
                 <!-- The action filters for NFC tech discovered events. -->
@@ -161,11 +165,16 @@
             <meta-data
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
-            <!-- Associates this activity with a specific set of NFC technologies
+            <!--
+                 Associates this activity with a specific set of NFC technologies
                  defined in the 'nfc_tech_filter' XML file, which lists the NFC technologies
-                 that the app is interested in handling. -->
+                 that the app is interested in handling.
+            -->
         </activity>
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8852713064890240~3757659756" />
 
         <service
             android:name=".foregroundServices.ForegroundServiceUtil"

@@ -103,8 +103,6 @@ dependencies {
     implementation(libs.play.services.mlkit.text.recognition.common)
     implementation(libs.play.services.mlkit.text.recognition)
     implementation(libs.balloon)
-
-
-
+    implementation(libs.play.services.ads)
 }
 

@@ -4,6 +4,7 @@ import com.example.learningapp.recyclerView.activity.RecyclerViewActivity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.learningapp.AdMob.AdmobActivity
 import com.example.learningapp.activityLifeCycle.ActivityLifeCycle
 import com.example.learningapp.balloonLibrary.BalloonActivity
 import com.example.learningapp.retrofit.activity.RandomUserActivity
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btFirebase , FirebaseMainActivity::class.java )
         onBtnClick(binding.btFaceDetection , CameraFaceDetection::class.java )
         onBtnClick(binding.btBallon , BalloonActivity::class.java )
+        onBtnClick(binding.btAdMob , AdmobActivity::class.java )
 
     }
 

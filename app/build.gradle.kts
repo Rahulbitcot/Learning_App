@@ -16,6 +16,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        manifestPlaceholders["appAuthRedirectScheme"] = "com.example.learningapp"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -104,5 +106,7 @@ dependencies {
     implementation(libs.play.services.mlkit.text.recognition)
     implementation(libs.balloon)
     implementation(libs.play.services.ads)
+    implementation (libs.appauth)
+
 }
 

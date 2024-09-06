@@ -6,7 +6,6 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -40,6 +39,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
+        <activity
+            android:name=".googleOAuth.GoogleDriveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".googleOAuth.GoogleOAuth"
+            android:exported="false" />
         <activity
             android:name=".AdMob.AdmobActivity"
             android:exported="false" />
@@ -181,6 +186,21 @@
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse" />
+
+        <activity
+            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth2redirect"
+                    android:scheme="com.example.learningapp" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -18,6 +18,9 @@ import com.example.learningapp.firebase.FirebaseMainActivity
 import com.example.learningapp.foregroundServices.ForegroundServices
 import com.example.learningapp.workManager.WorkManagerActivity
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
+import com.example.learningapp.googleOAuth.GoogleDriveActivity
+import com.example.learningapp.googleOAuth.GoogleOAuth
+import com.example.learningapp.googleOAuth.GoogleOAuth.Companion.isLogedIn
 import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.lottieAnimations.LottieAnimation
 import com.example.learningapp.mvvm.view.ViewActivity
@@ -63,7 +66,11 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btFaceDetection , CameraFaceDetection::class.java )
         onBtnClick(binding.btBallon , BalloonActivity::class.java )
         onBtnClick(binding.btAdMob , AdmobActivity::class.java )
-
+        if(isLogedIn){
+            onBtnClick(binding.btOAuth , GoogleDriveActivity::class.java )
+        }else{
+            onBtnClick(binding.btOAuth , GoogleOAuth::class.java )
+        }
     }
 
     private fun onBtnClick(btn : MaterialButton, targetActivity: Class<out AppCompatActivity>){

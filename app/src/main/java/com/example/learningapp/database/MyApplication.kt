@@ -12,6 +12,7 @@ open class MyApplication : Application() {
      lateinit var sharedPreferences: SharedPreferences
      val COUNTER_KEY = "Counter_Value"
      val LOG_IN_STATUS = "LOG_IN_STATUS"
+     val isLoggedIn  = "isLoggedIn"
 
      private val PREFS_NAME = "learning_app_SharedPref"
      lateinit var userRepository : UserRepository

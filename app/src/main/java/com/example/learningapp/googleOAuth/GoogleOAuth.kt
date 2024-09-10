@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.learningapp.database.MyApplication
 import com.example.learningapp.databinding.ActivityGoogleOauthBinding
 import net.openid.appauth.AuthorizationException
 import net.openid.appauth.AuthorizationRequest
@@ -23,6 +24,7 @@ class GoogleOAuth : AppCompatActivity() {
     private val tokenEndpoint = "https://oauth2.googleapis.com/token"
     private val scope = "openid email profile https://www.googleapis.com/auth/drive"
     private val authUri: AuthorizationServiceConfiguration
+    private var isLoggedIn :Boolean = false
 
 
 
@@ -38,6 +40,12 @@ class GoogleOAuth : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGoogleOauthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(checkLoginStatus()){
+            val intent = Intent(this ,GoogleDriveActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         // Initialize the AppAuth AuthorizationService
         authService = AuthorizationService(this)
@@ -60,6 +68,18 @@ class GoogleOAuth : AppCompatActivity() {
 
     }
 
+    private fun checkLoginStatus() : Boolean{
+        isLoggedIn  = (application as MyApplication).sharedPreferences.
+        getBoolean((application as MyApplication).isLoggedIn, false)
+        return isLoggedIn
+    }
+    private fun setLoginStatus(status: Boolean) {
+        with((application as MyApplication).sharedPreferences.edit()) {
+            putBoolean((application as MyApplication).isLoggedIn, status)
+            apply()
+        }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -77,13 +97,12 @@ class GoogleOAuth : AppCompatActivity() {
                     if (tokenResponse != null) {
                         // Handle successful token response
                          accessToken = tokenResponse.accessToken.toString()
-                        Log.d("AccessToken" , "AccessToken = ${accessToken}")
-                        if (accessToken != null) {
-                            isLogedIn = true
-                         val intent = Intent(this, GoogleDriveActivity::class.java)
-                            startActivity(intent)
+                        Log.d("AccessToken" , "AccessToken = $accessToken")
+                        setLoginStatus(true)
+                        val intent = Intent(this, GoogleDriveActivity::class.java)
+                        startActivity(intent)
+                        finish()
 
-                         }
                         val idToken = tokenResponse.idToken
                         // Use the tokens (e.g., save them, make authenticated API calls)
                     } else {
@@ -101,6 +120,5 @@ class GoogleOAuth : AppCompatActivity() {
     companion object {
         private const val AUTH_REQUEST_CODE = 1001
         var accessToken :String = ""
-        var isLogedIn = false
     }
 }

@@ -15,12 +15,4 @@ data class Result(
     val location: Location,
     val name: Name,
     val phone: String,
-
-//    val picture: Picture,
-//    val registered: Registered ,
-//    val id: Id,
-//    val cell: String,
-//    val nat: String,
-//    val login: Login,
-
 )

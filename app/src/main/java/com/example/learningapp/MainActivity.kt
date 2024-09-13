@@ -26,6 +26,7 @@ import com.example.learningapp.nfcTag.NFCTag
 import com.example.learningapp.pdfCreation.PdfCreation
 import com.example.learningapp.permissionHandling.PermissionActivity
 import com.example.learningapp.roomDb.activity.RoomDbActivity
+import com.example.learningapp.sampleApi.ApiActivity
 import com.example.learningapp.shimmerEffect.MainShimmerEffectActivity
 import com.example.learningapp.sideAndBottomNavigationBar.SideAndBottomNavigationActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
@@ -65,6 +66,8 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btBallon , BalloonActivity::class.java )
         onBtnClick(binding.btAdMob , AdmobActivity::class.java )
         onBtnClick(binding.btOAuth , GoogleOAuth::class.java )
+        onBtnClick(binding.btnSampleApi , ApiActivity::class.java )
+
 
     }
 

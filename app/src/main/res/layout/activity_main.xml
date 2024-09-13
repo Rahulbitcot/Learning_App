@@ -280,5 +280,15 @@
             app:layout_constraintStart_toStartOf="@+id/btBallon"
             app:layout_constraintEnd_toEndOf="@+id/btBallon"/>
 
+   <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSampleApi"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Sample Api"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btOAuth"
+            app:layout_constraintStart_toStartOf="@+id/btOAuth"
+            app:layout_constraintEnd_toEndOf="@+id/btOAuth"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

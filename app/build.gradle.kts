@@ -108,5 +108,8 @@ dependencies {
     implementation(libs.play.services.ads)
     implementation (libs.appauth)
 
+    implementation (libs.converter.scalars)
+
+
 }
 

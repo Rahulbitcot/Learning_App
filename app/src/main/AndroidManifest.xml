@@ -40,6 +40,9 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".webSocket.WebSocketActivity"
+            android:exported="false" />
+        <activity
             android:name=".sampleApi.ApiActivity"
             android:exported="false" />
         <activity

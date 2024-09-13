@@ -110,6 +110,9 @@ dependencies {
 
     implementation (libs.converter.scalars)
 
+    //WebSocket Library
+    implementation (libs.okhttp)
+
 
 }
 

@@ -30,6 +30,7 @@ import com.example.learningapp.sampleApi.ApiActivity
 import com.example.learningapp.shimmerEffect.MainShimmerEffectActivity
 import com.example.learningapp.sideAndBottomNavigationBar.SideAndBottomNavigationActivity
 import com.example.learningapp.viewpager.activity.ViewPagerActivity
+import com.example.learningapp.webSocket.WebSocketActivity
 import com.google.android.material.button.MaterialButton
 
 
@@ -67,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btAdMob , AdmobActivity::class.java )
         onBtnClick(binding.btOAuth , GoogleOAuth::class.java )
         onBtnClick(binding.btnSampleApi , ApiActivity::class.java )
-
+        onBtnClick(binding.btnWebSocket , WebSocketActivity::class.java )
 
     }
 

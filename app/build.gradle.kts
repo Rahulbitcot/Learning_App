@@ -61,8 +61,14 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.firestore.ktx)
     implementation(libs.androidx.work.runtime.ktx)
+
+    //Firebase
+    implementation(platform(libs.firebase.bom.v3120))
+    implementation (libs.firebase.messaging)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.auth.ktx)
+    implementation (libs.firebase.storage)
+
     implementation(libs.androidx.camera.view)
     implementation(libs.androidx.camera.lifecycle)
     implementation(libs.vision.common)
@@ -112,6 +118,10 @@ dependencies {
 
     //WebSocket Library
     implementation (libs.okhttp)
+
+    //Glide Library to show Images
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 
 
 }

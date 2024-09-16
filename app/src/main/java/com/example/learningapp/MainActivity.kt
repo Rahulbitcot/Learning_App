@@ -15,6 +15,7 @@ import com.example.learningapp.database.SharedPref
 import com.example.learningapp.databinding.ActivityMainBinding
 import com.example.learningapp.faceDetection.CameraFaceDetection
 import com.example.learningapp.firebase.FirebaseMainActivity
+import com.example.learningapp.firebaseStorage.FirebaseStorageActivity
 import com.example.learningapp.foregroundServices.ForegroundServices
 import com.example.learningapp.workManager.WorkManagerActivity
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
@@ -69,6 +70,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btOAuth , GoogleOAuth::class.java )
         onBtnClick(binding.btnSampleApi , ApiActivity::class.java )
         onBtnClick(binding.btnWebSocket , WebSocketActivity::class.java )
+        onBtnClick(binding.btnFirebaseStorage , FirebaseStorageActivity::class.java )
 
     }
 

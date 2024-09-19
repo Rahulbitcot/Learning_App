@@ -7,7 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.learningapp.database.MyApplication
+import com.example.learningapp.MyApplication
 import com.example.learningapp.retrofit.viewModel.MainViewModel
 import com.example.learningapp.retrofit.viewModel.MainViewModelFactory
 import com.example.learningapp.databinding.ActivityRandomUserBinding

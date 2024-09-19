@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("org.jetbrains.kotlin.kapt")
+    id("dagger.hilt.android.plugin")
     alias(libs.plugins.google.gms.google.services)
 }
 
@@ -123,6 +124,8 @@ dependencies {
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
 
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.android.compiler)
 
 }
 

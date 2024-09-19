@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.learningapp.database.MyApplication
+import com.example.learningapp.MyApplication
 import com.example.learningapp.databinding.ActivityGoogleDriveBinding
 import com.example.learningapp.googleOAuth.GoogleOAuth.Companion.accessToken
 import com.example.learningapp.googleOAuth.adapter.ImagesAdapter

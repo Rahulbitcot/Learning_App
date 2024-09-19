@@ -1,4 +1,4 @@
-package com.example.learningapp.database
+package com.example.learningapp
 
 import android.app.Application
 import android.content.Context
@@ -7,7 +7,9 @@ import com.example.learningapp.retrofit.api.ApiInterface
 import com.example.learningapp.retrofit.api.RetrofitHelper
 import com.example.learningapp.retrofit.repository.UserRepository
 import com.example.learningapp.retrofit.db.UserDatabase
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 open class MyApplication : Application() {
      lateinit var sharedPreferences: SharedPreferences
      val COUNTER_KEY = "Counter_Value"

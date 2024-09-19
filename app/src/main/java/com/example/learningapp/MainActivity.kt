@@ -20,6 +20,7 @@ import com.example.learningapp.foregroundServices.ForegroundServices
 import com.example.learningapp.workManager.WorkManagerActivity
 import com.example.learningapp.fragmentLifeCycle.activity.FragmentLifeCycle
 import com.example.learningapp.googleOAuth.GoogleOAuth
+import com.example.learningapp.hiltLibrary.HiltLibrary
 import com.example.learningapp.liveData.view.MainView
 import com.example.learningapp.lottieAnimations.LottieAnimation
 import com.example.learningapp.mvvm.view.ViewActivity
@@ -71,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         onBtnClick(binding.btnSampleApi , ApiActivity::class.java )
         onBtnClick(binding.btnWebSocket , WebSocketActivity::class.java )
         onBtnClick(binding.btnFirebaseStorage , FirebaseStorageActivity::class.java )
+        onBtnClick(binding.btnHiltLibrary , HiltLibrary::class.java )
 
     }
 

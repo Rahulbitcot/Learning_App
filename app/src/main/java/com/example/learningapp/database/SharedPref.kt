@@ -2,6 +2,7 @@ package com.example.learningapp.database
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.learningapp.MyApplication
 import com.example.learningapp.databinding.ActivitySharedPrefBinding
 
 class SharedPref : AppCompatActivity() {

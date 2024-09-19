@@ -310,5 +310,15 @@
             app:layout_constraintStart_toStartOf="@+id/btnWebSocket"
             app:layout_constraintEnd_toEndOf="@+id/btnWebSocket"/>
 
+  <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHiltLibrary"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Hilt Library"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnFirebaseStorage"
+            app:layout_constraintStart_toStartOf="@+id/btnFirebaseStorage"
+            app:layout_constraintEnd_toEndOf="@+id/btnFirebaseStorage"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

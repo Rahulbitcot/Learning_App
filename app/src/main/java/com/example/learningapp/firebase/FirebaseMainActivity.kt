@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.learningapp.R
-import com.example.learningapp.database.MyApplication
+import com.example.learningapp.MyApplication
 import com.example.learningapp.databinding.ActivityFirebaseMainBinding
 import com.example.learningapp.sideAndBottomNavigationBar.SideAndBottomNavigationActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn

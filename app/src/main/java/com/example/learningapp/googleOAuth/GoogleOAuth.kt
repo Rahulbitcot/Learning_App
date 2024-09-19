@@ -5,7 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.learningapp.database.MyApplication
+import com.example.learningapp.MyApplication
 import com.example.learningapp.databinding.ActivityGoogleOauthBinding
 import net.openid.appauth.AuthorizationException
 import net.openid.appauth.AuthorizationRequest

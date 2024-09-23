@@ -40,6 +40,15 @@
         android:theme="@style/Theme.LearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".sensors.SensorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sensors.TemperatureSensor"
+            android:exported="false" />
+        <activity
+            android:name=".sensors.RotationalSensor"
+            android:exported="false" />
+        <activity
             android:name=".hiltLibrary.HiltLibrary"
             android:exported="false" />
         <activity
